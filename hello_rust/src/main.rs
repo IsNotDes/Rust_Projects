@@ -1,7 +1,7 @@
 use std::io;
 
 fn main() {
-    println!("Welcome to Rust!");
+    println!("Welcome to Rust !");
     println!("Please enter your name:");
 
     let mut name = String::new();
