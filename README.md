@@ -1,6 +1,6 @@
 # My Rust Projects
 
-This repository contains three projects written in Rust:
+This repository contains four projects written in Rust:
 
 1. [Hello Rust](hello_rust/): A simple "Hello, World!" program written in Rust.
 2. [Calculator](calculator/): A simple command-line calculator that evaluates mathematical expressions.
