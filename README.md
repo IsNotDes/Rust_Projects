@@ -5,16 +5,27 @@ This repository contains three projects written in Rust:
 1. [Hello Rust](hello_rust/): A simple "Hello, World!" program written in Rust.
 2. [Calculator](calculator/): A simple command-line calculator that evaluates mathematical expressions.
 3. [Real-time Chat](real_time_chat/): A simple real-time chat application with a server and a client.
+4. [Chimera//Echo](Chimera/Echo/): A simple game about a dangerous AI.
 
-## Building and Running
+## Building
 
-Each project has its own `Cargo.toml` file. To build and run each project, navigate into the project directory and run `cargo build` and `cargo run` respectively.
+To build each project, navigate into the project directory and run `cargo build`.
 
-For example, to build and run the calculator project, run:
+For example, to build the calculator project, run:
 
 ```sh
 cd calculator
 cargo build
+```
+
+## Running
+
+To run each project, navigate into the project directory and run `cargo run`.
+
+For example, to run the calculator project, run:
+
+```sh
+cd calculator
 cargo run
 ```
 
