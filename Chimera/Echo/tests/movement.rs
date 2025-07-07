@@ -1,5 +1,5 @@
 use bevy::prelude::*;
-use echo::movement::move_camera;
+use echo::movement::{move_camera, Player};
 
 #[test]
 fn test_move_camera() {
@@ -9,10 +9,14 @@ fn test_move_camera() {
     app.add_systems(Update, move_camera);
 
     let camera_transform = Transform::from_xyz(0.0, 0.0, 0.0);
-    let camera_entity = app.world.spawn((Camera3d::default(), camera_transform.clone(), Camera::default())).id();
+    let camera_entity = app.world.spawn((
+        Camera3d::default(), 
+        camera_transform.clone(), 
+        Player::default(),
+    )).id();
 
     let mut input = ButtonInput::<KeyCode>::default();
-    input.press(KeyCode::KeyZ);
+    input.press(KeyCode::KeyW); // Use W key which is handled by our movement system
     app.insert_resource(input);
 
     // Run update once to initialize everything, including Time
