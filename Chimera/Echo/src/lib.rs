@@ -8,7 +8,7 @@ use std::time::Duration;
 use crossterm::{execute, terminal::{Clear, ClearType, EnterAlternateScreen, LeaveAlternateScreen}, style::{Print, SetForegroundColor, Color as CrosstermColor}};
 
 use intro::{type_text, glitch_screen};
-use movement::{move_camera, look_around, cursor_grab, setup_camera_controller, debug_camera_info, Player, CameraController};
+use movement::{move_camera, look_around, cursor_grab, setup_camera_controller, debug_camera_info};
 use setup::setup;
 
 pub fn run() -> io::Result<()> {
@@ -87,7 +87,7 @@ pub fn run() -> io::Result<()> {
             ..default()
         }))
         .add_systems(Startup, (setup, setup_camera_controller).chain())
-        .add_systems(Update, (move_camera, look_around.after(cursor_grab), cursor_grab, debug_camera_info))
+        .add_systems(Update, (move_camera, cursor_grab, look_around, debug_camera_info).chain())
         .run();
 
     Ok(())

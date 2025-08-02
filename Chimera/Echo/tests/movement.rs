@@ -15,8 +15,8 @@ fn test_move_camera() {
         Player::default(),
     )).id();
 
-    let mut input = ButtonInput::<KeyCode>::default();
-    input.press(KeyCode::KeyW); // Use W key which is handled by our movement system
+    let mut input = Input::<KeyCode>::default();
+    input.press(KeyCode::W); // Use W key which is handled by our movement system
     app.insert_resource(input);
 
     // Run update once to initialize everything, including Time

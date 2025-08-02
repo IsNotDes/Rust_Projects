@@ -1,10 +1,9 @@
 use bevy::prelude::*;
-use bevy::prelude::shape;
 
 pub fn setup(mut commands: Commands, mut meshes: ResMut<Assets<Mesh>>, mut materials: ResMut<Assets<StandardMaterial>>) {
     // Plane
     commands.spawn(PbrBundle {
-        mesh: meshes.add(Mesh::from(shape::Box::new(50.0, 0.1, 50.0))),
+        mesh: meshes.add(Mesh::from(shape::Plane::from_size(50.0))),
         material: materials.add(Color::rgb(0.3, 0.5, 0.3).into()),
         transform: Transform::default(),
         ..default()
